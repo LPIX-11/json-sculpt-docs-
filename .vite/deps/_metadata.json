@@ -1,0 +1,40 @@
+{
+  "hash": "380cc7e0",
+  "configHash": "b595dee4",
+  "lockfileHash": "6bc04b3b",
+  "browserHash": "0d7e588f",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "8b9f7723",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "60434f62",
+      "needsInterop": true
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "7aaf9e43",
+      "needsInterop": false
+    },
+    "@sonatel-os/json-sculpt": {
+      "src": "../../node_modules/@sonatel-os/json-sculpt/dist/index.esm.js",
+      "file": "@sonatel-os_json-sculpt.js",
+      "fileHash": "52629364",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-3IFX6TK2": {
+      "file": "chunk-3IFX6TK2.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}

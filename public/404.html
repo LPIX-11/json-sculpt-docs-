@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jsonSculpt</title>
+    <script>
+      // GitHub Pages SPA redirect
+      // Redirects 404s back to index.html so hash routing works
+      window.location.replace(
+        window.location.origin +
+          window.location.pathname.split("/").slice(0, 2).join("/") +
+          "/#/" +
+          window.location.pathname
+            .split("/")
+            .slice(2)
+            .join("/")
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
