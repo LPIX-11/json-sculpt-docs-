@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lpix-11.github.io/json-sculpt-docs/sitemap.xml

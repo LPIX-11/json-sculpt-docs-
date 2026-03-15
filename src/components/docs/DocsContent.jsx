@@ -513,8 +513,10 @@ export function DocsContent() {
         "$recursive": {
           "$track": "#items",
           "$rename": "children",
-          "label": "@link.title",
-          "url": "@link.path"
+          "$transform": {
+            "label": "@link.title",
+            "url": "@link.path"
+          }
         }
       }
     }

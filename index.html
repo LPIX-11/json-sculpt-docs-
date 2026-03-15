@@ -3,15 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jsonSculpt — Declarative JSON Transformation Engine</title>
-    <meta name="description" content="Sculpt your data. Shape your future. A declarative JSON transformation engine with nested resolution, type casting, recursion, and more." />
+
+    <!-- Primary SEO -->
+    <title>jsonSculpt — JSON Mapper, Transformer & API Response Reshaper | Zero Dependencies</title>
+    <meta name="description" content="jsonSculpt is a lightweight, zero-dependency JSON mapping and transformation engine for JavaScript. Map API responses, reshape nested JSON, cast types, handle fallbacks, and transform data declaratively with @link paths, $map, $recursive, and 17+ built-in operators. The best alternative to manual object destructuring." />
+    <meta name="keywords" content="json mapper, json transformer, json transformation, api response mapper, json reshaper, json data mapping, declarative json, json template engine, api data transformer, nested json resolver, json type casting, json schema mapper, object mapper javascript, json to json transformer, api response transformation, data mapping library, json path resolver, json fallback chain, recursive json, json spread operator, npm json mapper, lightweight json transformer, zero dependency json, json sculpt, sonatel, map api response, reshape json, transform json data, javascript data mapper, node json transformer, json object mapper npm" />
+    <meta name="author" content="Mohamed Johnson (LPIX-11)" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#06060e" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://lpix-11.github.io/json-sculpt-docs/" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Discord, Slack, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="jsonSculpt — JSON Mapper & Transformation Engine" />
+    <meta property="og:description" content="Zero-dependency declarative JSON mapping library. Reshape API responses, transform nested data, cast types, and handle fallbacks — all with simple templates. 3KB, 17+ operators, pure JS." />
+    <meta property="og:image" content="https://lpix-11.github.io/json-sculpt-docs/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="jsonSculpt — Declarative JSON transformation engine with zero dependencies" />
+    <meta property="og:url" content="https://lpix-11.github.io/json-sculpt-docs/" />
+    <meta property="og:site_name" content="jsonSculpt" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="jsonSculpt — JSON Mapper & Transformation Engine" />
+    <meta name="twitter:description" content="Zero-dependency declarative JSON mapping library. Reshape API responses, transform nested data, cast types, and handle fallbacks. 3KB, 17+ operators." />
+    <meta name="twitter:image" content="https://lpix-11.github.io/json-sculpt-docs/og-image.png" />
+    <meta name="twitter:image:alt" content="jsonSculpt — Declarative JSON transformation engine" />
+
+    <!-- JSON-LD Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "jsonSculpt",
+      "alternateName": ["json-sculpt", "@sonatel-os/json-sculpt"],
+      "description": "A lightweight, zero-dependency declarative JSON mapping and transformation engine for JavaScript and Node.js. Map API responses, reshape nested JSON objects, cast types, handle fallback chains, and transform data with simple declarative templates.",
+      "url": "https://lpix-11.github.io/json-sculpt-docs/",
+      "codeRepository": "https://github.com/sonatel-os/json-sculpt",
+      "programmingLanguage": "JavaScript",
+      "runtimePlatform": "Node.js",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@type": "Person",
+        "name": "Mohamed Johnson",
+        "alternateName": "LPIX-11"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sonatel",
+        "url": "https://github.com/sonatel-os"
+      },
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Cross-platform",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "keywords": "json mapper, json transformer, api response mapper, json reshaper, data mapping, declarative json, json template engine, object mapper"
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "jsonSculpt Documentation",
+      "url": "https://lpix-11.github.io/json-sculpt-docs/",
+      "description": "Official documentation and interactive playground for jsonSculpt, a declarative JSON mapping and transformation library for JavaScript.",
+      "inLanguage": "en"
+    }
+    </script>
+
+    <!-- JSON-LD: FAQ for rich snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is jsonSculpt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "jsonSculpt is a zero-dependency, 3KB JavaScript library for declaratively mapping and transforming JSON data. It lets you reshape API responses, cast types, handle nested data, and apply fallback chains using simple template objects with @link paths."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I map an API response to a different JSON structure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With jsonSculpt, you define a template object using @link paths that reference source data properties. Call sculpt.data({ data: apiResponse, to: template }) and it returns a new object shaped exactly like your template. Supports nested paths, type casting with ::type syntax, array mapping with $map/$transform, and fallback chains."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the alternatives to jsonSculpt for JSON transformation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common alternatives include manual destructuring, lodash/get, JSONPath, JMESPath, json-mapper-json, and morphism. jsonSculpt differentiates itself with zero dependencies, a 3KB bundle size, declarative templates, built-in type casting, recursive tree mapping, fallback chains, and 17+ built-in operators."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does jsonSculpt work with Node.js and browsers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. jsonSculpt is a universal JavaScript library that works in Node.js, browsers, Deno, Bun, and any JavaScript runtime. It has zero dependencies and ships as both ESM and CommonJS modules."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/json-sculpt-docs/favicon.svg" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <!-- Accessible hidden SEO content for crawlers (SPA content is JS-rendered) -->
+    <noscript>
+      <h1>jsonSculpt — JSON Mapper & Transformation Engine</h1>
+      <p>jsonSculpt is a zero-dependency, lightweight JavaScript library for declaratively mapping and transforming JSON data. Perfect for reshaping API responses, normalizing data structures, and building data pipelines.</p>
+      <h2>Features</h2>
+      <ul>
+        <li>@link paths — Deep property access with dot notation</li>
+        <li>Type casting — ::number, ::string, ::boolean, ::date</li>
+        <li>$map and $transform — Array iteration and reshaping</li>
+        <li>$map and $extract — Pull single fields from arrays</li>
+        <li>$spread — Merge array items into objects</li>
+        <li>$recursive — Handle infinite-depth tree structures</li>
+        <li>Fallback chains — Graceful null/undefined handling</li>
+        <li>Dynamic keys — Computed property names from data</li>
+        <li>$op operators — 17+ built-in string, number, date, and array operators</li>
+        <li>Custom operators — Register your own transformations</li>
+      </ul>
+      <h2>Installation</h2>
+      <p>npm install @sonatel-os/json-sculpt</p>
+      <p>Created by Mohamed Johnson (LPIX-11)</p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
